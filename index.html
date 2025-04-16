@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parth Sweets Corner</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Parth Sweets Corner</h1>
+      <div id="welcome-message" class="welcome"></div>
+    </header>
+
+    <div class="input-section">
+      <label for="customer-name">Customer Name:</label>
+      <input type="text" id="customer-name" oninput="updateWelcomeMessage()" placeholder="Your Name">
+    </div>
+
+    <div class="items-section">
+      <h2>Sweet Items (Price per kg)</h2>
+      <p>Enter quantity in grams:</p>
+      <div id="items-container"></div>
+    </div>
+
+    <div class="btn-group">
+      <button onclick="generateBill()">Generate Bill</button>
+      <button onclick="resetForm()">Reset</button>
+      <button onclick="printBill()">Print</button>
+      <button onclick="shareBill()">Share</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <div id="bill" class="bill"></div>
+    <div class="history-section">
+      <h3>Past Bills</h3>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
